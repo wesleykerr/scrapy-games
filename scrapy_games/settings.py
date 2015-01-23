@@ -11,6 +11,11 @@
 BOT_NAME = 'scrapy_games'
 
 SPIDER_MODULES = ['scrapy_games.spiders']
+ITEM_PIPELINES = {
+    'scrapy_games.pipelines.DatabasePipeline': 100,
+    'scrapy_games.pipelines.ReviewsPipeline': 101,
+}
+
 NEWSPIDER_MODULE = 'scrapy_games.spiders'
 DOWNLOAD_DELAY = 2
 
